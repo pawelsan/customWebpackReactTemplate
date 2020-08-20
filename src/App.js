@@ -1,21 +1,14 @@
-import React, { useReducer } from "react";
-import axios from "axios";
-import { dataReducer } from "../utils/dataReducer";
+import React from "react";
 import Counter from "./Counter";
+import List from "./List";
 import styles from "./style.css";
 
 const App = ({ title }) => {
-  const initialData = {
-    list: [],
-    error: null,
-  };
-
-  const [data, dispatch] = useReducer(dataReducer, initialData);
-
   return (
     <div>
-      <h1 className={styles.title}>A counter</h1>
+      <h1 className={styles.title}>{title}</h1>
       <Counter />
+      <List />
     </div>
   );
 };
