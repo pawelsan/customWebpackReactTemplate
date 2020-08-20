@@ -5,7 +5,7 @@ const Counter = () => {
   return (
     <div>
       <h2>A counter</h2>
-      <p>{counter}</p>
+      <span>{counter}</span>
 
       <button type="button" onClick={() => setCounter(counter + 1)}>
         Increment
