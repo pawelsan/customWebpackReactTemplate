@@ -1,4 +1,5 @@
-import React, { useState, useReducer } from "react";
+import React, { useReducer } from "react";
+import axios from "axios";
 import { dataReducer } from "../utils/dataReducer";
 import Counter from "./Counter";
 import styles from "./style.css";
@@ -9,13 +10,12 @@ const App = ({ title }) => {
     error: null,
   };
 
-  const [counter, setCounter] = useState(0);
   const [data, dispatch] = useReducer(dataReducer, initialData);
 
   return (
     <div>
       <h1 className={styles.title}>A counter</h1>
-      <Counter counter={counter} />
+      <Counter />
     </div>
   );
 };
